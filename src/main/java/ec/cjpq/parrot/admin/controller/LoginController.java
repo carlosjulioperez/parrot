@@ -1,5 +1,4 @@
-package ec.cjpq.parrot.admin.controller
+package ec.cjpq.parrot.admin.controller;
 
 public class LoginController{
 }
-

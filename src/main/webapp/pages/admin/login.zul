@@ -1,6 +1,5 @@
 <zk>
-    <!-- apply="org.zkoss.essentials.chapter7.LoginController" -->
-    <window id="loginWin" title="Credenciales" mode="overlapped" position="center"> 
+    <window id="loginWindow" title="Credenciales" mode="overlapped" position="center" apply="ec.cjpq.parrot.admin.controller.LoginController"> 
         <vbox hflex="min" align="center">
             <grid hflex="min">
                 <columns>
@@ -10,18 +9,17 @@
                 <rows>
                     <row>
                         Usuario:
-                        <textbox id="account" width="200px" />
+                        <textbox id="userTextbox" width="200px" />
                     </row>
                     <row>
                         Clave:
-                        <textbox id="password" type="password"
+                        <textbox id="passwordTextbox" type="password"
                             width="200px" />
                     </row>
                 </rows>
             </grid>
             <label id="message" sclass="warn" value="&#160;" />
-            <button id="login" label="Login" />
-
+            <button id="loginButton" label="Login" />
         </vbox>
     </window>
 </zk>
