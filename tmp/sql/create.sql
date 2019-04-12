@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE user(
+CREATE TABLE users(
     id          SMALLSERIAL PRIMARY KEY,
     username    VARCHAR(50) UNIQUE,
     password    VARCHAR(50),

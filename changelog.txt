@@ -17,4 +17,5 @@ Parrot
 	* Test:
 		mvn test -Dtest=ec.cjpq.parrot.AppTest
 		mvn test -Dtest=ec.cjpq.parrot.sl.dao.EmployeeDaoTest
-
+	* Sql:
+		# psql oymar -a -f /Users/carper/local/projects/parrot/tmp/sql/create.sql
