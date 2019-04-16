@@ -18,6 +18,7 @@ public class EmployeeDaoTest{
     @Test
     public void dao(){
 
+        //Esta conexión debe obtenerse dinámicamente al seleccionar el usuario
         Jdbi jdbi = Jdbi.create("jdbc:postgresql://localhost:5432/oymar", "postgres", "");
         jdbi.installPlugin(new SqlObjectPlugin());
 

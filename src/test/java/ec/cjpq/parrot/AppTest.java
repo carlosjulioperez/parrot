@@ -2,7 +2,8 @@ package ec.cjpq.parrot;
 
 import org.junit.Test;
 
-import ec.cjpq.parrot.util.Util;
+import ec.cjpq.parrot.util.UtilHelper;
+import ec.cjpq.parrot.util.DbProperties;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -17,7 +18,10 @@ public class AppTest
     public void shouldAnswerWithTrue(){
         assertTrue( true );
 
-        Util.getInstance().showMessage();
+        UtilHelper.getInstance().showMessage();
+
+        System.out.println(DbProperties.DB_DRIVER_CLASS.value());
+
     }
 
 }

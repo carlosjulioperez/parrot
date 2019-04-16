@@ -1,0 +1,12 @@
+git add changelog.txt
+git add src/main/java/ec/cjpq/parrot/util/DbProperties.java
+git rm src/main/java/ec/cjpq/parrot/util/Util.java
+git add src/test/java/ec/cjpq/parrot/AppTest.java
+git add src/test/java/ec/cjpq/parrot/sl/dao/EmployeeDaoTest.java
+git add tmp/sql/create.sql
+git add act.sh
+git add src/main/java/ec/cjpq/parrot/admin/dao/
+git add src/main/java/ec/cjpq/parrot/admin/model/
+git add src/main/java/ec/cjpq/parrot/util/UtilHelper.java
+git add src/test/java/ec/cjpq/parrot/admin/
+git add tmp/sql/insert.sql

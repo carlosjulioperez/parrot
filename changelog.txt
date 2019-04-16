@@ -1,10 +1,16 @@
 Parrot
-	* Cargar variables de entorno desde LXDE:
-		$ source ~/.profile
 
+	* Test:
+		mvn test -Dtest=ec.cjpq.parrot.AppTest
+		mvn test -Dtest=ec.cjpq.parrot.sl.dao.EmployeeDaoTest
+		mvn test -Dtest=ec.cjpq.parrot.admin.dao.UsersDaoTest
+	
 	* Jetty:
 		$ mvn jetty:run -Djetty.http.port=9090
 		$ mvn -q jetty:run -Djetty.http.port=9090
+
+	* Cargar variables de entorno desde LXDE:
+		$ source ~/.profile
 
 	* Generación de proyecto:
 		
@@ -14,8 +20,7 @@ Parrot
 		-DarchetypeVersion=1.4 -DinteractiveMode=false
 
 		mvn archetype:generate -DgroupId=ec.cjpq.parrot -DartifactId=parrot -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4 -DinteractiveMode=false
-	* Test:
-		mvn test -Dtest=ec.cjpq.parrot.AppTest
-		mvn test -Dtest=ec.cjpq.parrot.sl.dao.EmployeeDaoTest
+	
 	* Sql:
-		# psql oymar -a -f /Users/carper/local/projects/parrot/tmp/sql/create.sql
+		# psql oymar -a -f /home/carper/local/projects/parrot/tmp/sql/create.sql
+		# psql oymar -a -f /home/carper/local/projects/parrot/tmp/sql/insert.sql

@@ -1,12 +1,17 @@
 package ec.cjpq.parrot.util;
 
+import java.io.IOException;
+import java.util.Properties;
+
+// https://github.com/perspilling/jdbi-examples/blob/master/src/main/java/no/kodemaker/ps/jdbiapp/DbProperties.java
+
 public enum DbProperties {
 
     DB_TYPE         ("db.type"),
     DB_DRIVER_CLASS ("db.driver_class"),
     DB_URL          ("db.url"),
     DB_USERNAME     ("db.username"),
-    DB_PASSWORD     ("db.password"),
+    DB_PASSWORD     ("db.password");
 
     private final String key;
 
@@ -14,19 +19,19 @@ public enum DbProperties {
         this.key = key;
     }
 
-    private final static Properties applicationProperties = new Properties();
+    private final static Properties appProperties = new Properties();
     private static String propsFilename = "db.properties";
 
     static {
         try {
-            applicationProperties.load(DbProperties.class.getClassLoader().getResourceAsStream(propsFilename));
+            appProperties.load(DbProperties.class.getClassLoader().getResourceAsStream(propsFilename));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public String val() {
-        return applicationProperties.getProperty(key, "");
+    public String value() {
+        return appProperties.getProperty(key, "");
     }
 
 }
